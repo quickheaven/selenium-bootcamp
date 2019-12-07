@@ -1,14 +1,13 @@
 package demo;
 
-import java.nio.file.Paths;
-
 public class WebDriverManager {
 
     public static void chromeDriverSetup() {
-        //String chromeDriverPath = Paths.get("/drivers/chromedriver").toAbsolutePath().toString();
-        String chromeDriverPath = "D:\\x-20a\\repos-github\\selenium-bootcamp\\selenium-bootcamp-core\\src\\main\\resources\\drivers\\chromedriver";
+        String chromeDriverPath;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            chromeDriverPath += ".exe";
+            chromeDriverPath = "D:\\drivers\\chromedriver.exe";
+        } else {
+            chromeDriverPath = "/users/drivers/chromedriver";
         }
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
     }
