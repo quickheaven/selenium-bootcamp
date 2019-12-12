@@ -1,13 +1,13 @@
-package ca.quickheaven.seleniumbootcampcore;
+package ca.quickheaven.selenium;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SeleniumBootcampCoreApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(SeleniumBootcampCoreApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
