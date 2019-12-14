@@ -2,15 +2,14 @@ package demo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
+import util.DriverFactory;
 
 public class CreateAccount {
 
     public static void main(String[] args) {
-        WebDriverManager.fireFoxDriverSetup();
 
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = DriverFactory.open("firefox");
         driver.get("http://sdettraining.com/trguitransactions/AccountManagement.aspx");
         driver.findElement(By.partialLinkText("CREATE ACCOUNT")).click(); // By.linkText works on the link text as you see it with your eyes on the website (after all CSS is applied)
 

@@ -3,15 +3,13 @@ package demo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import util.DriverFactory;
 
 public class Login {
 
     public static void main(String[] args) {
 
-        WebDriverManager.chromeDriverSetup();
-
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = DriverFactory.open("chrome");
 
         driver.get("http://sdettraining.com/trguitransactions/AccountManagement.aspx");
 
