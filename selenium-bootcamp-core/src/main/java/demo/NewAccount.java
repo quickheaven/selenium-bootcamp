@@ -20,7 +20,6 @@ public class NewAccount {
         boolean monthlyEmail = false;
         boolean occassionalEmail = false;
 
-
         WebDriver driver = DriverFactory.open("chrome");
         driver.get("http://sdettraining.com/trguitransactions/AccountManagement.aspx");
 
@@ -63,7 +62,7 @@ public class NewAccount {
         submitButton.click();
 
         String conf = driver.findElement(By.id("MainContent_lblTransactionResult")).getText();
-        String expected = "Customer information added sucessfully";
+        String expected = "Customer information added successfully";
         if (conf.equalsIgnoreCase(expected)) {
             System.out.println("Confirmation: " + conf);
         } else {
